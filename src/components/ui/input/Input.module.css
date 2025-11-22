@@ -1,0 +1,22 @@
+.input {
+    width: 100%;
+    padding: 16px 16px 16px 52px;
+    background: #1D2432;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 480px) {
+    .input {
+        padding: 14px 14px 14px 46px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,69 @@
+.item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    background: #1D2432;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.item:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: #222A39;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.note {
+    font-weight: 300;
+    font-size: 14px;
+    color: #D1D5DC;
+}
+
+@media (max-width: 768px) {
+    .item {
+        padding: 14px 16px;
+        gap: 16px;
+    }
+
+    .username {
+        font-size: 16px;
+    }
+
+    .note {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        padding: 12px 14px;
+        gap: 12px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+}
