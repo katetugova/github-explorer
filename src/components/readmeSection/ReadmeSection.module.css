@@ -1,0 +1,23 @@
+.card {
+    background: #1D2432;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+
+    padding: 24px 28px;
+    margin-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.content {
+    font-size: 15px;
+    color: #D1D5DC;
+    white-space: pre-wrap;
+}

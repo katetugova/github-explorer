@@ -1,0 +1,78 @@
+.card {
+    flex: 1 1 min(100%, 300px);
+    background: #1D2432;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    transition: background 0.2s ease, border-color 0.2s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: #222a39;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.description {
+    font-size: 16px;
+    color: #D1D5DC;
+    line-height: 22px;
+}
+
+.meta {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    font-size: 15px;
+    color: #D1D5DC;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.langDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.9;
+
+    white-space: nowrap;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.8;
+}
+
+.update {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #9ca3af;
+}

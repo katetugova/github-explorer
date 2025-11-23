@@ -1,0 +1,28 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #D1D5DC;
+    font-size: 14px;
+    font-weight: 300;
+
+    margin-bottom: 24px;
+}
+
+.part {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.separator {
+    margin: 0 8px;
+    opacity: 0.5;
+}
+
+@media (max-width: 480px) {
+    .breadcrumbs {
+        font-size: 12px;
+    }
+}

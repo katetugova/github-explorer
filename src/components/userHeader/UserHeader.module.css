@@ -1,0 +1,174 @@
+.wrapper {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+
+    background: #1D2432;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+
+    padding: 24px 28px;
+    margin-bottom: 80px;
+
+    gap: 24px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #D1D5DC;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+
+    max-width: 700px;
+    width: 100%;
+}
+
+.info button {
+    align-self: flex-start;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.name {
+    font-size: 26px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.bio {
+    font-size: 16px;
+    color: #D1D5DC;
+    max-width: 600px;
+}
+
+.stats {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: #D1D5DC;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.statItem:not(:last-child) {
+    padding-right: 24px;
+}
+
+.statItem:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.statValue {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 24px;
+    }
+
+    .info {
+
+    }
+
+    .name {
+        font-size: 26px;
+    }
+
+    .bio {
+        font-size: 16px;
+    }
+
+    .stats {
+        gap: 20px;
+    }
+
+    .statValue {
+        font-size: 16px;
+    }
+
+    .statLabel {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        padding: 20px;
+
+        gap: 20px;
+    }
+
+    .avatar {
+        width: 96px;
+        height: 96px;
+        margin: 0;
+    }
+
+    .info {
+        margin-left: 0;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .info button {
+        align-self: stretch;
+    }
+
+    .name {
+        font-size: 22px;
+    }
+
+    .bio {
+        font-size: 14px;
+        max-width: 260px;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .statItem {
+        margin-right: 0;
+        padding-right: 0;
+    }
+
+    .statItem::after {
+        display: none;
+    }
+}
