@@ -10,6 +10,8 @@ interface RepoCardProps {
     stars: number;
     forks: number;
     updatedAt: string;
+
+    onClick?: () => void;
 }
 
 function RepoCard({
@@ -20,11 +22,10 @@ function RepoCard({
     stars,
     forks,
     updatedAt,
+    onClick,
 }: RepoCardProps) {
-    const formattedDate = formatUpdatedAt(updatedAt);
-
     return (
-        <div className={styles.card}>
+        <div className={styles.card} onClick={onClick}>
             <div className={styles.main}>
                 <h3 className={styles.name}>{name}</h3>
                 {description && (
@@ -52,21 +53,21 @@ function RepoCard({
                 </div>
             </div>
 
-            <p className={styles.update}>обновлено {formattedDate}</p>
+            <p className={styles.update}>
+                обновлено {formatDate(updatedAt)}
+            </p>
         </div>
     );
 }
 
 export default RepoCard;
 
-function formatUpdatedAt(dateString: string): string {
+function formatDate(dateString: string): string {
     const date = new Date(dateString);
-    const now = new Date();
-    const diff = Math.floor(
-        (now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24)
-    );
 
-    if (diff <= 0) return "сегодня";
-    if (diff === 1) return "1 день назад";
-    return `${diff} дней назад`;
+    return date.toLocaleDateString("ru-RU", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
 }

@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import styles from "./ReadmeSection.module.css";
 
 interface Props {
@@ -10,7 +11,7 @@ function ReadmeSection({ content }: Props) {
             <h2 className={styles.title}>README</h2>
 
             <p className={styles.content}>
-                {content}
+                <ReactMarkdown>{content}</ReactMarkdown>
             </p>
         </div>
     );

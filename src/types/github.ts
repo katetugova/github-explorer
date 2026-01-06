@@ -13,8 +13,20 @@ export interface GithubRepo {
     name: string;
     description: string | null;
     language: string | null;
+
     stargazers_count: number;
     forks_count: number;
+    subscribers_count: number;
+
     updated_at: string;
-    owner: { login: string };
+    default_branch: string;
+    size: number;
+
+    license: {
+        name: string;
+    } | null;
+
+    owner: {
+        login: string;
+    };
 }

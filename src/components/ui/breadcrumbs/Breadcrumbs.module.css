@@ -21,6 +21,15 @@
     opacity: 0.5;
 }
 
+.link {
+    color: #d1d5dc;
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 480px) {
     .breadcrumbs {
         font-size: 12px;

@@ -13,7 +13,6 @@ function HistoryItem({ username, onClick }: HistoryItemProps) {
 
             <div className={styles.info}>
                 <p className={styles.username}>{username}</p>
-                <p className={styles.note}>подпись</p>
             </div>
         </div>
     );
