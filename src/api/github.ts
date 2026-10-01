@@ -1,3 +1,5 @@
+import type { GithubRepo, GithubUser } from "../types/github";
+
 const BASE_URL = "https://api.github.com";
 
 async function request<T>(url: string): Promise<T> {
@@ -16,15 +18,15 @@ async function request<T>(url: string): Promise<T> {
 }
 
 export function getUser(username: string) {
-    return request<any>(`${BASE_URL}/users/${username}`);
+    return request<GithubUser>(`${BASE_URL}/users/${username}`);
 }
 
 export function getUserRepos(username: string) {
-    return request<any[]>(`${BASE_URL}/users/${username}/repos?per_page=100`);
+    return request<GithubRepo[]>(`${BASE_URL}/users/${username}/repos?per_page=100`);
 }
 
 export function getRepo(owner: string, repo: string) {
-    return request<any>(`${BASE_URL}/repos/${owner}/${repo}`);
+    return request<GithubRepo>(`${BASE_URL}/repos/${owner}/${repo}`);
 }
 
 export function getRepoLanguages(owner: string, repo: string) {
