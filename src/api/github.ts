@@ -45,5 +45,9 @@ export async function getRepoReadme(owner: string, repo: string) {
 
     const data = await res.json();
 
-    return atob(data.content);
+    const binary = atob(data.content);
+    const bytes = Uint8Array.from(binary, (char) => char.charCodeAt(0));
+
+    return new TextDecoder("utf-8").decode(bytes);
+    //return atob(data.content);
 }
